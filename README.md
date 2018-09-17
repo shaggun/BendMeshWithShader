@@ -3,11 +3,11 @@ Bending a mesh with a shader using a sine function in Unity
 ![gif](https://i.imgur.com/ndl30QA.gif)
 
 This is a simple shader for Unity to bend a mesh with a sine function.
-Useful when you want to simulate the bending caused due to a force being applied to an object.
-The sine function is being plotted along the Z axis, if you want to bend along the X axis edit line 33 like this:
+Useful when you want to simulate the bending caused due to some force(like weight) being applied to an object.
+The sine function is being plotted along the Z axis, if you want to bend along the X axis edit line 36 `vertexPos.z` to `vertexPos.x` like this:
 
 ```sh
-float4 appendResult = (float4(vertex3Pos.z , ( sin( ( _OffsetSin + ( vertex3Pos.x * _Frequency ) ) ) * _Amplitude ) , vertex3Pos.x , 0.0));
+float4 result = (float4(0.0 , ( sin( ( _OffsetSin + ( vertexPos.x * _Frequency ) ) ) * _Amplitude ) , 0.0 , 0.0));
 ```
 
 The more vertices your mesh has along the axis you want to bend the smoother it will look.
