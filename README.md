@@ -12,6 +12,6 @@ float4 result = (float4(0.0 , ( sin( ( _OffsetSin + ( vertexPos.x * _Frequency )
 
 The more vertices your mesh has along the axis you want to bend the smoother it will look.
 
-If you don't want to download or clone the whole project [here's only the shader](https://gist.github.com/shaggun/50a9d39187f5516a870aba03528368ee).
+If you don't want to download or clone the whole project [here's the shader only](https://gist.github.com/shaggun/50a9d39187f5516a870aba03528368ee).
 
 **Tested with Unity 2018.2**
